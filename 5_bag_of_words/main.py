@@ -6,11 +6,14 @@ from nltk.probability import FreqDist
 nltk.download('punkt')
 nltk.download('stopwords')
 
+
 def preprocess_text(text):
     stop_words = set(stopwords.words('english'))
     word_tokens = word_tokenize(text)
-    filtered_words = [word.lower() for word in word_tokens if word.isalpha() and word.lower() not in stop_words]
+    filtered_words = [word.lower() for word in word_tokens if word.isalpha(
+    ) and word.lower() not in stop_words]
     return filtered_words
+
 
 def create_bow_model(texts):
     all_words = []
@@ -21,6 +24,7 @@ def create_bow_model(texts):
     word_freq = FreqDist(all_words)
     bow_model = {word: freq for word, freq in word_freq.items()}
     return bow_model
+
 
 # Example usage
 texts = [

@@ -3,6 +3,7 @@ def print_board(board):
         print(" | ".join(row))
         print("-" * 5)
 
+
 def check_winner(board, player):
     # Check rows, columns, and diagonals
     for i in range(3):
@@ -12,8 +13,10 @@ def check_winner(board, player):
         return True
     return False
 
+
 def is_board_full(board):
     return all(board[i][j] != " " for i in range(3) for j in range(3))
+
 
 def tic_tac_toe():
     board = [[" " for _ in range(3)] for _ in range(3)]
@@ -49,6 +52,7 @@ def tic_tac_toe():
 
         # Switch to the other player
         current_player = players[1] if current_player == players[0] else players[0]
+
 
 if __name__ == "__main__":
     tic_tac_toe()

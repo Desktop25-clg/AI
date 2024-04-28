@@ -1,6 +1,7 @@
 import csv
 import re
 
+
 def identify_patterns(csv_file_path, column_name):
     patterns = {}
 
@@ -21,6 +22,8 @@ def identify_patterns(csv_file_path, column_name):
                     patterns[match] = 1
 
     return patterns
+
+
 csv_file_path = 'Social.csv'  # Update with your CSV file path
 column_name = 'Gender'     # Update with the actual column name in your CSV file
 

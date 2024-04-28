@@ -9,7 +9,7 @@ y_train = 2 * X_train + 1 + 0.1 * np.random.randn(100, 1)
 
 # Build the model
 model = tf.keras.Sequential([
-     tf.keras.layers.Dense(units=1, input_shape=(1,))
+    tf.keras.layers.Dense(units=1, input_shape=(1,))
 ])
 
 # Compile the model
